@@ -8,7 +8,8 @@ if 'need_rerun' not in st.session_state:
 # Load projections data if not already in session state
 if 'projections_data' not in st.session_state:
     file_path = "2023_season_projections.csv"
-    st.session_state.projections_data = pd.read_csv(file_path)
+    # Drop the first unnamed index column if present
+    st.session_state.projections_data = pd.read_csv(file_path, index_col=0)
 
 # Initialize search query if not already in session state
 if 'search_query' not in st.session_state:
