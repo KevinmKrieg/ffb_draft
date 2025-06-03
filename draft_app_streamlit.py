@@ -48,7 +48,7 @@ st.write('Select a position or click on a player to remove them. Leave blank to 
 # Create columns for position filter and search bar
 cols = st.columns(2)
 
-# Position filter in the first column
+# Position filter in the second column
 position = cols[1].selectbox('Select Position:', ['All', 'RB', 'QB', 'WR', 'TE', 'DST'], key='position')
 
 # Text input for searching players, using session state, in the second column
