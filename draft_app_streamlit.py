@@ -71,7 +71,7 @@ if st.session_state.need_rerun:
     st.session_state.need_rerun = False
     st.experimental_rerun()
 
-# Display the top 10 players based on the current filter
+# Display the top 20 players based on the current filter
 top_players = display_top_players(position if position else None)
 
 # Define color mapping using emojis
